@@ -28,6 +28,8 @@ private slots:
     void on_num_player_2_clicked();
     void on_play_button_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::PlayerSelection *ui;
     unsigned num_players;

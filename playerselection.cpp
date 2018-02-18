@@ -6,7 +6,7 @@ PlayerSelection::PlayerSelection(QWidget *parent) :
     ui(new Ui::PlayerSelection), num_players(0)
 {
     ui->setupUi(this);
-    QPixmap title("C:/Users/Aleksi/Documents/PokerBox/res/playerselection_title.png");
+    QPixmap title("res/playerselection_title.png");
     ui->player_selection_title->setPixmap(title);
     ui->player_selection_title->setScaledContents(true);
     ui->player_selection_title->setSizePolicy( QSizePolicy::Ignored, QSizePolicy::Ignored );
@@ -121,8 +121,7 @@ void PlayerSelection::on_num_player_8_clicked()
 
 void PlayerSelection::on_play_button_clicked()
 {
-
-    if(!check_names()){
+    if(check_names() != 0){
         qDebug() << "Player names invalid...";
         return;
     }
@@ -131,4 +130,10 @@ void PlayerSelection::on_play_button_clicked()
 
 int PlayerSelection::check_names(){
 
+    return 0;
+}
+
+void PlayerSelection::on_pushButton_clicked()
+{
+    this->hide();
 }

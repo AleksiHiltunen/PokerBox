@@ -6,7 +6,7 @@ Welcome::Welcome(QWidget *parent) :
     ui(new Ui::Welcome)
 {
     ui->setupUi(this);
-    QPixmap welcome("C:/Users/Aleksi/Documents/PokerBox/res/welcome.png");
+    QPixmap welcome("res/welcome.png");
     ui->welcome_label->setPixmap(welcome);
     ui->welcome_label->setScaledContents(true);
     ui->welcome_label->setSizePolicy( QSizePolicy::Ignored, QSizePolicy::Ignored );
