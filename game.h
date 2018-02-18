@@ -6,6 +6,7 @@
 #include <QVector>
 #include <random>
 #include "time.h"
+#include <QPixmap>
 
 enum SUIT{
     SPADES,
@@ -17,13 +18,14 @@ enum SUIT{
 struct Card{
     unsigned value;
     SUIT suit;
+    QPixmap pic;
 };
 
 struct Player{
     QString name;
     unsigned balance;
     unsigned seat;
-    Card hand[];
+    Card hand[2];
 };
 
 class Game
